@@ -1,6 +1,14 @@
+
+@use "./partial/variables";
+@use "./partial/_header";
+@use "./partial/_main";
 @mixin logo_and_title_font {
   font-family: "shrikhand", cursive;
+  font-weight: lighter;
 }
+
+
+
 
 * {
   font-family: "roboto", sans-serif;
@@ -15,22 +23,9 @@
 body {
   margin: 0%;
 }
-// Header
-.logo {
-  display: flex;
-  justify-content: center;
-  box-shadow: 10px 0px 5px grey;
-  clip-path: inset(0px -10px -10px -10px);
 
-  .logo__img {
-    width: 40%;
-    height: 50%;
-    margin: 0px 0px 10px 0px;
-  }
-}
 // Main
 
-// Footer
 .footer {
   display: flex;
   flex-direction: column;
@@ -43,18 +38,19 @@ body {
     // trouver une propriété qui rend le texte moins flou !!!!!
   }
 
-  .footer__text {
+  &__text {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 10%;
   }
 
-  .footer__text__link {
+  &__text__link {
     color: white;
     text-decoration: none;
   }
 
-  .footer__text__icon {
-    width: 6%;
+  &__text__icon {
+  //  EM permet d'avoir un espace entre l'icone et le texte toujours biren espacé, mieux que %
+    width: 1.5em;
   }
 }

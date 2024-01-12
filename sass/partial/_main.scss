@@ -1,0 +1,57 @@
+$background__grey: #e4dddd;
+$background__darkgrey: #f1f1f1;
+@mixin flex__center {
+    display: grid ;
+    grid-template-columns: repeat(1, 1fr);
+   
+}
+
+// MainHead
+.mainHead {
+    @include flex__center;
+
+    &__locality {
+        background-color: $background__grey;
+
+    }
+
+    &__explore {
+        background-color: $background__darkgrey;
+    }
+}
+
+// Fonctionnalités
+.functionality {
+    background-color: rgb(63, 46, 46);
+
+    &__title {
+        background-color:red;
+    }
+
+    &__buttons {
+        @include flex__center;
+        background-color: $background__darkgrey;
+    }
+
+    &__buttons__bloc {
+        background-color: $background__grey;
+    }
+}
+
+// Restaurants
+.restaurants {
+    background-color: white;
+
+    &__title {
+        background-color:red;
+    }
+
+    &cards__bloc {
+        background-color: $background__darkgrey;
+    }
+
+    &__cards__bloc__img {
+        width: 15%;
+        height: 15%;
+    }
+}

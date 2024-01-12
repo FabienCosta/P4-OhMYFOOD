@@ -1,3 +1,56 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  box-shadow: 10px 0px 5px grey;
+  -webkit-clip-path: inset(0px -10px -10px -10px);
+          clip-path: inset(0px -10px -10px -10px);
+}
+.logo .logo__img {
+  width: 40%;
+  height: 50%;
+  margin: 0px 0px 10px 0px;
+}
+
+.mainHead {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.mainHead__locality {
+  background-color: #e4dddd;
+}
+.mainHead__explore {
+  background-color: #f1f1f1;
+}
+
+.functionality {
+  background-color: rgb(63, 46, 46);
+}
+.functionality__title {
+  background-color: red;
+}
+.functionality__buttons {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  background-color: #f1f1f1;
+}
+.functionality__buttons__bloc {
+  background-color: #e4dddd;
+}
+
+.restaurants {
+  background-color: white;
+}
+.restaurants__title {
+  background-color: red;
+}
+.restaurantscards__bloc {
+  background-color: #f1f1f1;
+}
+.restaurants__cards__bloc__img {
+  width: 15%;
+  height: 15%;
+}
+
 * {
   font-family: "roboto", sans-serif;
 }
@@ -12,19 +65,6 @@ body {
   margin: 0%;
 }
 
-.logo {
-  display: flex;
-  justify-content: center;
-  box-shadow: 10px 0px 5px grey;
-  -webkit-clip-path: inset(0px -10px -10px -10px);
-          clip-path: inset(0px -10px -10px -10px);
-}
-.logo .logo__img {
-  width: 40%;
-  height: 50%;
-  margin: 0px 0px 10px 0px;
-}
-
 .footer {
   display: flex;
   flex-direction: column;
@@ -34,16 +74,17 @@ body {
 }
 .footer .footer__title {
   font-family: "shrikhand", cursive;
+  font-weight: lighter;
 }
-.footer .footer__text {
+.footer__text {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 10%;
 }
-.footer .footer__text__link {
+.footer__text__link {
   color: white;
   text-decoration: none;
 }
-.footer .footer__text__icon {
-  width: 6%;
+.footer__text__icon {
+  width: 1.5em;
 }/*# sourceMappingURL=style.css.map */
