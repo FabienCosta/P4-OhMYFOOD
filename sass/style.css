@@ -1,16 +1,49 @@
+* {
+  font-family: "roboto", sans-serif;
+}
+
+:root {
+  --main-color: #0065fc;
+  --main-bg-color: #f2f2f2;
+  --filter-bg-color: #deebff;
+}
+
 body {
   margin: 0%;
 }
 
-h1 {
+.logo {
   display: flex;
   justify-content: center;
   box-shadow: 10px 0px 5px grey;
   -webkit-clip-path: inset(0px -10px -10px -10px);
           clip-path: inset(0px -10px -10px -10px);
 }
-h1 .logo__img {
+.logo .logo__img {
   width: 40%;
   height: 50%;
   margin: 0px 0px 10px 0px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(61, 59, 59);
+  padding: 0% 0% 10% 5%;
+  color: white;
+}
+.footer .footer__title {
+  font-family: "shrikhand", cursive;
+}
+.footer .footer__text {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10%;
+}
+.footer .footer__text__link {
+  color: white;
+  text-decoration: none;
+}
+.footer .footer__text__icon {
+  width: 6%;
 }/*# sourceMappingURL=style.css.map */

@@ -1,20 +1,60 @@
+@mixin logo_and_title_font {
+  font-family: "shrikhand", cursive;
+}
+
+* {
+  font-family: "roboto", sans-serif;
+}
+
+:root {
+  --main-color: #0065fc;
+  --main-bg-color: #f2f2f2;
+  --filter-bg-color: #deebff;
+}
+
 body {
-    margin: 0%;
+  margin: 0%;
 }
 // Header
-h1 {
-    display: flex;
-    justify-content: center;
-    box-shadow: 10px 0px 5px grey;
-    clip-path: inset(0px -10px -10px -10px);
-   
-    .logo__img {
-        width: 40%;
-        height: 50%;
-        margin: 0px 0px 10px 0px;
-        
-    }
+.logo {
+  display: flex;
+  justify-content: center;
+  box-shadow: 10px 0px 5px grey;
+  clip-path: inset(0px -10px -10px -10px);
+
+  .logo__img {
+    width: 40%;
+    height: 50%;
+    margin: 0px 0px 10px 0px;
+  }
 }
 // Main
 
 // Footer
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(61, 59, 59);
+  padding: 0% 0% 10% 5%;
+  color: white;
+
+  .footer__title {
+    @include logo_and_title_font;
+    // trouver une propriété qui rend le texte moins flou !!!!!
+  }
+
+  .footer__text {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10%;
+  }
+
+  .footer__text__link {
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer__text__icon {
+    width: 6%;
+  }
+}
