@@ -1,57 +1,61 @@
 $background__grey: #e4dddd;
 $background__darkgrey: #f1f1f1;
+$primary__color: #9356dc;
+$secondary__color: #ff79da;
 @mixin flex__center {
-    display: grid ;
-    grid-template-columns: repeat(1, 1fr);
-   
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 }
 
 // MainHead
 .mainHead {
-    @include flex__center;
+  @include flex__center;
 
-    &__locality {
-        background-color: $background__grey;
+  &__locality {
+    display: flex;
+    justify-content: center;
+    background-color: $background__grey;
+    padding: 3%;
+    font-weight: bolder;
+  }
+  &__locality__icon {
+    margin-right: 2%;
+  }
 
-    }
-
-    &__explore {
-        background-color: $background__darkgrey;
-    }
-}
-
-// Fonctionnalités
-.functionality {
-    background-color: rgb(63, 46, 46);
-
+  &__explore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $background__darkgrey;
+    padding: 1em 15% 1em 15%;
+    text-align: center;
+    font-size: large;
     &__title {
-        background-color:red;
+      font-weight: bolder;
+    }
+    &__text {
+      margin-top: 0%;
+      color: grey;
+    }
+    &__button {
+      margin-top: 2%;
+      background: linear-gradient($secondary__color, $primary__color);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 1em 2em 1em 2em;
+      margin-bottom: 5%;
     }
 
-    &__buttons {
-        @include flex__center;
-        background-color: $background__darkgrey;
-    }
-
-    &__buttons__bloc {
-        background-color: $background__grey;
-    }
 }
 
-// Restaurants
+
+
+
 .restaurants {
-    background-color: white;
-
-    &__title {
-        background-color:red;
-    }
-
-    &cards__bloc {
-        background-color: $background__darkgrey;
-    }
-
     &__cards__bloc__img {
-        width: 15%;
-        height: 15%;
+        width: 20%;
+        height: 20%;
     }
+}
 }
