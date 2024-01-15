@@ -103,8 +103,60 @@ $secondary__color: #ff79da;
 // restaurants
 .restaurants {
   background-color: $background__darkgrey;
-  .restaurants__cards__bloc__img {
-    width: 10%;
-    height: 10%;
+  padding: 5% 2% 5% 2%;
+
+  &__title {
+    font-size: 150%;
+    padding-left: 2%;
+  }
+
+  &__cards {
+    
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    &__bloc {
+      background-color: white;
+      margin: 2%;
+      border-radius: 10px;
+      
+      &__tag {
+        position: absolute;
+        background-color: #99e2d0;
+        color: #008766;
+        margin: 5% 0% 0% 70%;
+        padding: 2%;
+        border-radius: 5px;
+        font-weight: bolder;
+      }
+      
+
+      &__img {
+        width: 100%;
+        max-height: 15em;
+        object-fit: cover;
+        border-radius: 10px 10px 0px 0px;
+        
+      }
+
+      &__info {
+        display: flex;
+        width: auto;
+
+      }
+      &__text {
+        margin-left: 5%;
+        font-size: larger;
+        line-height: 2%;
+        width: 100%;
+      }
+
+      &__icon {
+        font-size: 150%;
+        padding: 5%;
+        &:active {
+          background: linear-gradient($primary__color, $secondary__color);        }
+      }
+    }
   }
 }
