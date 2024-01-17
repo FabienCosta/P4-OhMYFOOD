@@ -9,6 +9,15 @@ $background__darkgrey: #f1f1f1;
   font-size: 500;
 }
 
+.return__link {
+  position: fixed;
+  margin-left: -85%;
+  margin-top: -1%;
+  
+  color: black;
+ 
+}
+
 .restaurant__img {
   object-fit: cover;
   width: 100%;
