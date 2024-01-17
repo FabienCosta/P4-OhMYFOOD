@@ -1,14 +1,56 @@
+$primary__color: #9356dc;
+$secondary__color: #ff79da;
+$tertiary__color: #99e2d0;
+$background__grey: #eaeaea;
+$background__darkgrey: #f1f1f1;
 
-
-
-
-
-
-
+@mixin logo_and_title_font {
+  font-family: "shrikhand", cursive;
+  font-size: 500;
+}
 
 .restaurant__img {
-    object-fit: cover;
-    width: 100%;
-    height: 20rem;
-    
+  object-fit: cover;
+  width: 100%;
+  height: 20rem;
+}
+
+.restaurant {
+  border-radius: 30px 30px 0px 0px;
+  background-color: $background__darkgrey;
+  padding: 0% 2% 0% 2%;
+
+  .restaurant__title {
+    @include logo_and_title_font;
+  }
+}
+
+.menu {
+  background-color: white;
+  background-color: $background__darkgrey;
+  margin: 0% 0% 10% 0%;
+
+  &__text {
+    text-decoration: underline $tertiary__color 5px;
+  }
+
+  &__card {
+    display: flex;
+    border-radius: 10px;
+    background-color: white;
+    margin: 0% 1% 5% 1%;
+    box-shadow: 5px 5px 5px rgb(165, 164, 164);
+    line-height: 15%;
+    &__info {
+        // ajouter les 3 poiunts quand le texte est rop long
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 85%;
+ 
+    &__price {
+      font-weight: bolder;
+      margin-top: 10%;
+    }
+  }
 }
