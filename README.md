@@ -7,3 +7,5 @@ https://www.pierre-giraud.com/sass-apprendre-cours-complet/presentation-installa
 
 Utiliser des composant en scss avec @use et @forward
 https://stefaniefluin.medium.com/the-new-sass-module-system-out-with-import-in-with-use-e1bd8ba032d0
+https://blog.smarchal.com/sass-et-media-queries
+Ne pas oublier de lancer sass watching !!!!!!!!!!!!!!

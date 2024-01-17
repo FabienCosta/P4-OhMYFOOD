@@ -3,6 +3,7 @@
 @use "./partial/_header";
 @use "./partial/_main";
 @use "./partial/_footer";
+@use "../restaurants/_menu1";
 
 $primary__color: #9356DC;
 $secondary__color: #FF79DA;
@@ -29,7 +30,13 @@ $tertiary__color: #99E2D0;
 
 body {
   margin: 0%;
+  // @media screen and (min-width: 1023px) {
+  //   margin: 0% 3% 0% 3%;
+    
+  // }
 }
+
+
 
 // Main
 
@@ -39,7 +46,13 @@ body {
   background-color: rgb(61, 59, 59);
   padding: 0% 0% 10% 5%;
   color: white;
+  @media screen and (min-width: 1023px) {
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 2% 2% 2% 5%;
 
+  }
+  
   .footer__title {
     @include logo_and_title_font;
     // trouver une propriété qui rend le texte moins flou !!!!!
@@ -47,8 +60,11 @@ body {
 
   &__text {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
     grid-gap: 10%;
+    @media (min-width: 1023px) {
+      grid-template-columns: repeat(4, 1fr);
+      
+  }
   }
 
   &__text__link {
@@ -59,5 +75,10 @@ body {
   &__text__icon {
   //  EM permet d'avoir un espace entre l'icone et le texte toujours biren espacé, mieux que %
     width: 1.5em;
-  }
+  
+
 }
+}
+
+
+
