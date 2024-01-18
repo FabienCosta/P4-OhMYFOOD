@@ -82,7 +82,7 @@
 }
 .functionality__buttons {
   display: grid;
-  grid-template-columns: no-repeat(1, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   justify-items: center;
 }
 @media screen and (min-width: 1023px) {
@@ -235,7 +235,6 @@
 .restaurant .restaurant__title {
   text-align: start;
   font-family: "shrikhand", cursive;
-  font-size: 500;
 }
 
 .menu {
