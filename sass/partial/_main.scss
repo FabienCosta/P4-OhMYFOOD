@@ -9,7 +9,7 @@ $secondary__color: rgb(255, 121, 218);
   grid-template-columns: repeat(1, 1fr);
 }
 @mixin button__shadow__off {
-  transition: 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
 }
 @mixin button__shadow__on {
