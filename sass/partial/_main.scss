@@ -1,9 +1,9 @@
-// Variables
+//? Variables
 $background__grey: #eaeaea;
 $background__darkgrey: #f1f1f1;
 $primary__color: rgb(147, 86, 220);
 $secondary__color: rgb(255, 121, 218);
-// Mixins
+//? Mixins
 @mixin flex__center {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -19,7 +19,7 @@ $secondary__color: rgb(255, 121, 218);
   font-size: 180%;
   font-weight: 700;
 }
-// MainHead
+//? MainHead
 .mainHead {
   @include flex__center;
 
@@ -80,7 +80,7 @@ $secondary__color: rgb(255, 121, 218);
   }
 }
 
-// functionality
+//? functionality
 .functionality {
   margin: 0% 0% 10% 0%;
   display: flex;
@@ -149,7 +149,7 @@ $secondary__color: rgb(255, 121, 218);
   }
 }
 
-// restaurants
+//? restaurants
 .restaurants {
   background-color: $background__darkgrey;
   padding: 5% 2% 5% 2%;
