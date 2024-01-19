@@ -4,6 +4,7 @@
   box-shadow: 10px 0px 5px grey;
   margin: 0%;
   padding: 5% 0% 3% 0%;
+  position: relative;
 }
 .logo .logo__img {
   width: 40%;
@@ -25,6 +26,7 @@
   background-color: #eaeaea;
   padding: 3%;
   font-weight: bolder;
+  color: #4c4c4c;
 }
 .mainHead__locality__icon {
   margin-right: 2%;
@@ -36,30 +38,25 @@
   background-color: #f1f1f1;
   padding: 1em 15% 1em 15%;
   text-align: center;
-  font-size: large;
-}
-.mainHead__explore__title {
-  font-weight: bolder;
-}
-@media screen and (min-width: 1023px) {
-  .mainHead__explore__title {
-    font-size: 200%;
-  }
+  font-size: 150%;
+  font-weight: 700;
 }
 .mainHead__explore__text {
   margin-top: 0%;
-  color: grey;
+  color: #676767;
+  font-weight: 100;
 }
 .mainHead__explore__button {
   margin-top: 2%;
   transition: all 300ms ease-in-out;
-  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
   background: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
   color: white;
   border: none;
   border-radius: 50px;
   padding: 1em 2em 1em 2em;
   margin-bottom: 5%;
+  font-size: large;
 }
 @media screen and (min-width: 1023px) {
   .mainHead__explore__button {
@@ -67,17 +64,23 @@
   }
 }
 .mainHead__explore__button:hover {
-  box-shadow: 13px 7px 5px rgba(5, 5, 5, 0.5);
+  box-shadow: 0px 7px 7px rgba(5, 5, 5, 0.5);
   background: linear-gradient(rgba(255, 121, 218, 0.8), rgba(147, 86, 220, 0.8));
 }
 
 .functionality {
-  margin: 0%;
+  margin: 0% 0% 10% 0%;
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 1023px) {
+  .functionality {
+    margin: 0% 0% 3% 0%;
+  }
+}
 .functionality__title {
-  font-size: 150%;
+  font-size: 180%;
+  font-weight: 700;
   padding-left: 2%;
 }
 .functionality__buttons {
@@ -93,10 +96,9 @@
 }
 .functionality__buttons__bloc {
   display: flex;
-  justify-content: center;
   align-items: center;
   transition: all 300ms ease-in-out;
-  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
   background-color: #eaeaea;
   border-radius: 25px;
   border-style: none;
@@ -108,7 +110,7 @@
   box-shadow: 5px 5px 5px rgb(214, 209, 209);
 }
 .functionality__buttons__bloc:hover {
-  box-shadow: 13px 7px 5px rgba(5, 5, 5, 0.5);
+  box-shadow: 0px 7px 7px rgba(5, 5, 5, 0.5);
   background-color: rgba(246, 246, 246, 0.8);
 }
 .functionality__buttons__bloc__text {
@@ -118,17 +120,17 @@
   border-radius: 50%;
   width: 1em;
   padding: 1%;
-  margin: 0% 0% 0% -83%;
+  margin: 0% 0% 0% -5%;
 }
 @media screen and (min-width: 1023px) {
   .functionality__buttons__bloc__text {
-    margin: 0% 0% 0% -27%;
+    margin: 0% 0% 0% -2%;
   }
 }
 .functionality__buttons__bloc__icon {
   font-size: 150%;
   color: rgb(109, 109, 109);
-  margin: 0.5em;
+  margin: 0.5em 1em 0.5em 1em;
 }
 .functionality__buttons__bloc__icon:hover {
   color: rgb(147, 86, 220);
@@ -139,7 +141,8 @@
   padding: 5% 2% 5% 2%;
 }
 .restaurants__title {
-  font-size: 150%;
+  font-size: 180%;
+  font-weight: 700;
   padding-left: 2%;
 }
 .restaurants__cards {
@@ -157,24 +160,28 @@
   background-color: white;
   margin: 2%;
   border-radius: 10px;
+  text-decoration: none;
 }
 .restaurants__cards__bloc__tag {
+  transition: all 300ms ease-in-out;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
   position: absolute;
   background-color: #99e2d0;
   color: #008766;
-  margin: 5% 0% 0% 75%;
-  padding: 0.5% 1% 0.5% 1%;
+  margin: 5% 0% 0% 70%;
+  padding: 2% 3% 2% 3%;
   border-radius: 5px;
   font-weight: bolder;
 }
 @media screen and (min-width: 1023px) {
   .restaurants__cards__bloc__tag {
     margin: 2% 0% 0% 35%;
+    padding: 1% 2% 1% 2%;
   }
 }
 .restaurants__cards__bloc__img {
   width: 100%;
-  max-height: 15em;
+  max-height: 13em;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px 10px 0px 0px;
@@ -183,8 +190,6 @@
   display: flex;
   width: auto;
   color: black;
-  -webkit-text-decoration: double;
-          text-decoration: double;
 }
 .restaurants__cards__bloc__text {
   margin-left: 5%;
@@ -225,6 +230,8 @@
   background-color: #f1f1f1;
   padding: 0% 2% 0% 2%;
   text-align: center;
+  position: relative;
+  top: -4em;
 }
 @media screen and (min-width: 1023px) {
   .restaurant {
@@ -278,8 +285,6 @@
 }
 
 body {
-  background-color: rgb(7, 111, 111);
-  text-align: center;
   margin: 0;
   padding: 0;
 }

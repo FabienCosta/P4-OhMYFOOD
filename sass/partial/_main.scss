@@ -10,12 +10,15 @@ $secondary__color: rgb(255, 121, 218);
 }
 @mixin button__shadow__off {
   transition: all 300ms ease-in-out;
-  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 @mixin button__shadow__on {
-  box-shadow: 13px 7px 5px rgba(5, 5, 5, 0.5);
+  box-shadow: 0px 7px 7px rgba(5, 5, 5, 0.5);
 }
-
+@mixin title__size {
+  font-size: 180%;
+  font-weight: 700;
+}
 // MainHead
 .mainHead {
   @include flex__center;
@@ -26,6 +29,7 @@ $secondary__color: rgb(255, 121, 218);
     background-color: $background__grey;
     padding: 3%;
     font-weight: bolder;
+    color: #4c4c4c;
   }
   &__locality__icon {
     margin-right: 2%;
@@ -38,17 +42,17 @@ $secondary__color: rgb(255, 121, 218);
     background-color: $background__darkgrey;
     padding: 1em 15% 1em 15%;
     text-align: center;
-    font-size: large;
+    font-size: 150%;
+    font-weight: 700;
 
     &__title {
-      font-weight: bolder;
       @media screen and (min-width: 1023px) {
-        font-size: 200%;
       }
     }
     &__text {
       margin-top: 0%;
-      color: grey;
+      color: #676767;
+      font-weight: 100;
     }
     &__button {
       margin-top: 2%;
@@ -59,6 +63,7 @@ $secondary__color: rgb(255, 121, 218);
       border-radius: 50px;
       padding: 1em 2em 1em 2em;
       margin-bottom: 5%;
+      font-size: large;
 
       @media screen and (min-width: 1023px) {
         font-size: 0.9em;
@@ -77,13 +82,17 @@ $secondary__color: rgb(255, 121, 218);
 
 // functionality
 .functionality {
-  margin: 0%;
+  margin: 0% 0% 10% 0%;
   display: flex;
   flex-direction: column;
+  @media screen and (min-width: 1023px) {
+    margin: 0% 0% 3% 0%;
+  }
 
   &__title {
-    font-size: 150%;
+    @include title__size;
     padding-left: 2%;
+   
   }
 
   &__buttons {
@@ -97,7 +106,6 @@ $secondary__color: rgb(255, 121, 218);
 
     &__bloc {
       display: flex;
-      justify-content: center;
       align-items: center;
       @include button__shadow__off;
       background-color: $background__grey;
@@ -109,9 +117,10 @@ $secondary__color: rgb(255, 121, 218);
       font-size: 100%;
       font-weight: 700;
       box-shadow: 5px 5px 5px rgb(214, 209, 209);
-      &:hover {
+      &:hover  {
         @include button__shadow__on;
         background-color: rgb(246, 246, 246, 0.8);
+        
       }
 
       &__text {
@@ -121,17 +130,18 @@ $secondary__color: rgb(255, 121, 218);
         border-radius: 50%;
         width: 1em;
         padding: 1%;
-        margin: 0% 0% 0% -83%;
+        margin: 0% 0% 0% -5%;
         @media screen and (min-width: 1023px) {
-          margin: 0% 0% 0% -27%;
+          margin: 0% 0% 0% -2%;
         }
       }
 
       &__icon {
         font-size: 150%;
         color: rgb(109, 109, 109);
-        margin: 0.5em;
+        margin: 0.5em 1em 0.5em 1em;
         &:hover {
+          // ! Trouver un moyen pour que l'icone prenne la couleur au survol du bloc et pas juste de l'icone
           color: $primary__color;
         }
       }
@@ -145,7 +155,7 @@ $secondary__color: rgb(255, 121, 218);
   padding: 5% 2% 5% 2%;
 
   &__title {
-    font-size: 150%;
+    @include title__size;
     padding-left: 2%;
   }
 
@@ -163,24 +173,28 @@ $secondary__color: rgb(255, 121, 218);
       background-color: white;
       margin: 2%;
       border-radius: 10px;
+      text-decoration: none;
 
       &__tag {
+        @include button__shadow__off;
         position: absolute;
         background-color: #99e2d0;
         color: #008766;
-        margin: 5% 0% 0% 75%;
-        padding: 0.5% 1% 0.5% 1%;
+        // ! changer la valeur du padding pour que ça se place a la bonne distance du bord en responsive
+        margin: 5% 0% 0% 70%;
+        padding: 2% 3% 2% 3%;
         border-radius: 5px;
         font-weight: bolder;
-        @media  screen and (min-width: 1023px) {
+        @media screen and (min-width: 1023px) {
           margin: 2% 0% 0% 35%;
-          
+          padding: 1% 2% 1% 2%;
+
         }
       }
 
       &__img {
         width: 100%;
-        max-height: 15em;
+        max-height: 13em;
         object-fit: cover;
         border-radius: 10px 10px 0px 0px;
       }
@@ -189,20 +203,19 @@ $secondary__color: rgb(255, 121, 218);
         display: flex;
         width: auto;
         color: black;
-        text-decoration: double;
       }
       &__text {
         margin-left: 5%;
         font-size: larger;
         line-height: 2%;
         width: 100%;
-        
       }
 
       &__icon {
         display: flex;
         font-size: 180%;
         padding: 2%;
+        // ! ANIMATION CSS sur le coeur
         transition: 5000ms;
         &:hover::before {
           content: "lala";
