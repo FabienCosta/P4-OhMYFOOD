@@ -3,6 +3,7 @@ $background__grey: #eaeaea;
 $background__darkgrey: #f1f1f1;
 $primary__color: rgb(147, 86, 220);
 $secondary__color: rgb(255, 121, 218);
+
 //? Mixins
 @mixin flex__center {
   display: grid;
@@ -19,6 +20,7 @@ $secondary__color: rgb(255, 121, 218);
   font-size: 180%;
   font-weight: 700;
 }
+
 //? MainHead
 .mainHead {
   @include flex__center;
@@ -31,6 +33,7 @@ $secondary__color: rgb(255, 121, 218);
     font-weight: bolder;
     color: #4c4c4c;
   }
+
   &__locality__icon {
     margin-right: 2%;
   }
@@ -49,11 +52,13 @@ $secondary__color: rgb(255, 121, 218);
       @media screen and (min-width: 1023px) {
       }
     }
+
     &__text {
       margin-top: 0%;
       color: #676767;
       font-weight: 100;
     }
+
     &__button {
       margin-top: 2%;
       @include button__shadow__off;
@@ -85,6 +90,7 @@ $secondary__color: rgb(255, 121, 218);
   margin: 0% 0% 10% 0%;
   display: flex;
   flex-direction: column;
+
   @media screen and (min-width: 1023px) {
     margin: 0% 0% 3% 0%;
   }
@@ -92,13 +98,13 @@ $secondary__color: rgb(255, 121, 218);
   &__title {
     @include title__size;
     padding-left: 2%;
-   
   }
 
   &__buttons {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
+
     @media screen and (min-width: 1023px) {
       grid-template-columns: repeat(3, 1fr);
       margin-bottom: 3%;
@@ -117,10 +123,10 @@ $secondary__color: rgb(255, 121, 218);
       font-size: 100%;
       font-weight: 700;
       box-shadow: 5px 5px 5px rgb(214, 209, 209);
-      &:hover  {
+
+      &:hover {
         @include button__shadow__on;
         background-color: rgb(246, 246, 246, 0.8);
-        
       }
 
       &__text {
@@ -131,6 +137,7 @@ $secondary__color: rgb(255, 121, 218);
         width: 1em;
         padding: 1%;
         margin: 0% 0% 0% -5%;
+
         @media screen and (min-width: 1023px) {
           margin: 0% 0% 0% -2%;
         }
@@ -170,6 +177,7 @@ $secondary__color: rgb(255, 121, 218);
     }
 
     &__bloc {
+      position: relative;
       background-color: white;
       margin: 2%;
       border-radius: 10px;
@@ -180,15 +188,19 @@ $secondary__color: rgb(255, 121, 218);
         position: absolute;
         background-color: #99e2d0;
         color: #008766;
-        // ! changer la valeur du padding pour que ça se place a la bonne distance du bord en responsive
-        margin: 5% 0% 0% 70%;
+        top: 5%;
+        left: 75%;
         padding: 2% 3% 2% 3%;
         border-radius: 5px;
         font-weight: bolder;
-        @media screen and (min-width: 1023px) {
-          margin: 2% 0% 0% 35%;
-          padding: 1% 2% 1% 2%;
+        // pour aligner la box "nouveau" j'ai du mettre un breakpoint sur plusieurs format responsive
+        @media screen and (min-width: 800px) {
+          left: 80%;
+        }
 
+        @media screen and (min-width: 1023px) {
+          left: 80%;
+          padding: 1% 2% 1% 2%;
         }
       }
 
@@ -204,6 +216,7 @@ $secondary__color: rgb(255, 121, 218);
         width: auto;
         color: black;
       }
+
       &__text {
         margin-left: 5%;
         font-size: larger;
@@ -217,6 +230,7 @@ $secondary__color: rgb(255, 121, 218);
         padding: 2%;
         // ! ANIMATION CSS sur le coeur
         transition: 5000ms;
+
         &:hover::before {
           content: "lala";
           background: linear-gradient($primary__color, $secondary__color);

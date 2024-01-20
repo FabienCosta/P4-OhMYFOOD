@@ -1,46 +1,35 @@
-
-
+// ? Imports
 @use "./partial/_header";
 @use "./partial/_main";
 @use "./partial/_footer";
 @use "../restaurants/_menu1";
 @use "../animation/_anim";
 
-$primary__color: #9356DC;
-$secondary__color: #FF79DA;
-$tertiary__color: #99E2D0;
+// ? Variables
+$primary__color: #9356dc;
+$secondary__color: #ff79da;
+$tertiary__color: #99e2d0;
 
-
+// ? Mixins
 @mixin logo_and_title_font {
   font-family: "shrikhand", cursive;
   font-weight: lighter;
 }
 
-
-
-
+// ? Global
 * {
   font-family: "roboto", sans-serif;
 }
-
 :root {
   --main-color: #0065fc;
   --main-bg-color: #f2f2f2;
   --filter-bg-color: #deebff;
 }
-
 body {
   margin: 0%;
-  // @media screen and (min-width: 1023px) {
-  //   margin: 0% 3% 0% 3%;
-    
-  // }
 }
 
-
-
-// Main
-
+//? Footer
 .footer {
   display: flex;
   flex-direction: column;
@@ -51,35 +40,27 @@ body {
     flex-direction: row-reverse;
     align-items: center;
     padding: 2% 2% 2% 5%;
-
   }
-  
+
   .footer__title {
     @include logo_and_title_font;
-    // trouver une propriété qui rend le texte moins flou !!!!!
   }
-
+  
   &__text {
     display: grid;
     grid-gap: 10%;
     @media (min-width: 1023px) {
       grid-template-columns: repeat(4, 1fr);
-      
-  }
+    }
   }
 
   &__text__link {
     color: white;
     text-decoration: none;
   }
-
-  &__text__icon {
-  //  EM permet d'avoir un espace entre l'icone et le texte toujours biren espacé, mieux que %
-    width: 1.5em;
   
-
+  &__text__icon {
+    //  EM permet d'avoir un espace entre l'icone et le texte toujours bien espacé, mieux que %
+    width: 1.5em;
+  }
 }
-}
-
-
-

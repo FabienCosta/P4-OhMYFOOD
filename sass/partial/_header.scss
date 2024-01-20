@@ -1,11 +1,10 @@
-// Header
+//? Header
 .logo {
   display: flex;
   justify-content: center;
   box-shadow: 10px 0px 5px grey;
   margin: 0%;
   padding: 5% 0% 3% 0%;
-
   position: relative;
 
   .logo__img {
@@ -13,7 +12,6 @@
     height: 100%;
     @media screen and (min-width: 1023px) {
       width: 20%;
-      
     }
   }
 }

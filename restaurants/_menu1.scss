@@ -1,10 +1,10 @@
-
 // ? ariables
 $primary__color: #9356dc;
 $secondary__color: #ff79da;
 $tertiary__color: #99e2d0;
 $background__grey: #eaeaea;
 $background__darkgrey: #f1f1f1;
+
 // ? Mixins
 @mixin button__shadow__off {
   transition: all 300ms ease-in-out;
@@ -12,19 +12,16 @@ $background__darkgrey: #f1f1f1;
 }
 @mixin logo_and_title_font {
   font-family: "shrikhand", cursive;
-  font-size: 180%;
+  font-size: 200%;
   font-weight: lighter;
- 
 }
 
+// ? MainHead
 .return__link {
-  // ! le lien doit rester dans le header
-  position: fixed;
+  position: absolute;
   margin-left: -85%;
   margin-top: -1%;
-  
   color: black;
- 
 }
 
 .restaurant__img {
@@ -38,7 +35,7 @@ $background__darkgrey: #f1f1f1;
   background-color: $background__darkgrey;
   padding: 0% 2% 0% 2%;
   text-align: center;
-// partie du main qui chevauche le header
+  // partie du main qui chevauche le header
   position: relative;
   top: -6em;
 
@@ -49,61 +46,61 @@ $background__darkgrey: #f1f1f1;
   }
 
   .restaurant__title {
-    // ! plus d'espace entre les éléments
     text-align: justify;
     @include logo_and_title_font;
     padding: 5% 0% 0% 0%;
-    width: 100%;
+
     @media screen and (min-width: 1023px) {
       text-align: center;
     }
-}
 
-.menu {
-  text-align: start;
-  background-color: white;
-  background-color: $background__darkgrey;
-  margin: 0% 0% 10% 0%;
-
-  &__text {
-    display: flex;
-    // ! comment retrecir l'underscore
-    text-decoration: underline $tertiary__color 5px;
+    &__icon {
+      margin-left: 10%;
+    }
   }
 
-  &__card {
-    display: flex;
-    border-radius: 10px;
+  .menu {
+    text-align: start;
     background-color: white;
-    margin: 0% 1% 5% 1%;
-    box-shadow: 0px 5px 10px rgb(165, 164, 164);
-    line-height: 15%;
-    @media screen and (min-width: 1023px) {
-      margin: 0% 1% 3% 1%;
+    background-color: $background__darkgrey;
+    margin: 0% 0% 10% 0%;
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      &::after {
+        content: "";
+        width: 3em;
+        height: 5px;
+        background-color: $tertiary__color;
+      }
     }
-    &__info {
-      // ajouter les 3 poiunts quand le texte est rop long
-      padding: 0% 0% 0% 2%;
-      // partie qui gere l'ffichage du texte quand il est trop long
-      // ! pourquoi les ... ne s'affichent pas ?
-      overflow: hidden;
-      white-space: nowrap;
-      width: 85%;
-    }
-    
-    &__price {
-      font-weight: bolder;
-      // ! le prix doit rester aligné et ne pas bouger
-      margin-top: 10%;
+
+    &__card {
+      display: flex;
+      border-radius: 10px;
+      background-color: white;
+      margin: 0% 1% 5% 1%;
+      box-shadow: 0px 5px 10px rgb(165, 164, 164);
+      line-height: 15%;
+
       @media screen and (min-width: 1023px) {
-        margin-top: 5%;
+        margin: 0% 1% 3% 1%;
+      }
+
+      &__info {
+        //! ajouter les 3 poiunts quand le texte est trop long
+        padding: 0% 0% 0% 2%;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 85%;
+        text-overflow: ellipsis;
+      }
+
+      &__price {
+        font-weight: bolder;
+        margin-top: 2.5em;
       }
     }
   }
 }
-}
-
-
-
-
-

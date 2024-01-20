@@ -157,6 +157,7 @@
   }
 }
 .restaurants__cards__bloc {
+  position: relative;
   background-color: white;
   margin: 2%;
   border-radius: 10px;
@@ -168,14 +169,20 @@
   position: absolute;
   background-color: #99e2d0;
   color: #008766;
-  margin: 5% 0% 0% 70%;
+  top: 5%;
+  left: 75%;
   padding: 2% 3% 2% 3%;
   border-radius: 5px;
   font-weight: bolder;
 }
+@media screen and (min-width: 800px) {
+  .restaurants__cards__bloc__tag {
+    left: 80%;
+  }
+}
 @media screen and (min-width: 1023px) {
   .restaurants__cards__bloc__tag {
-    margin: 2% 0% 0% 35%;
+    left: 80%;
     padding: 1% 2% 1% 2%;
   }
 }
@@ -212,7 +219,7 @@
 }
 
 .return__link {
-  position: fixed;
+  position: absolute;
   margin-left: -85%;
   margin-top: -1%;
   color: black;
@@ -243,15 +250,17 @@
 .restaurant .restaurant__title {
   text-align: justify;
   font-family: "shrikhand", cursive;
-  font-size: 180%;
+  font-size: 200%;
   font-weight: lighter;
   padding: 5% 0% 0% 0%;
-  width: 100%;
 }
 @media screen and (min-width: 1023px) {
   .restaurant .restaurant__title {
     text-align: center;
   }
+}
+.restaurant .restaurant__title__icon {
+  margin-left: 10%;
 }
 .restaurant .menu {
   text-align: start;
@@ -261,8 +270,13 @@
 }
 .restaurant .menu__text {
   display: flex;
-  -webkit-text-decoration: underline #99e2d0 5px;
-          text-decoration: underline #99e2d0 5px;
+  flex-direction: column;
+}
+.restaurant .menu__text::after {
+  content: "";
+  width: 3em;
+  height: 5px;
+  background-color: #99e2d0;
 }
 .restaurant .menu__card {
   display: flex;
@@ -282,15 +296,11 @@
   overflow: hidden;
   white-space: nowrap;
   width: 85%;
+  text-overflow: ellipsis;
 }
 .restaurant .menu__card__price {
   font-weight: bolder;
-  margin-top: 10%;
-}
-@media screen and (min-width: 1023px) {
-  .restaurant .menu__card__price {
-    margin-top: 5%;
-  }
+  margin-top: 2.5em;
 }
 
 body {
