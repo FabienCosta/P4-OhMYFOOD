@@ -29,6 +29,73 @@ body {
   margin: 0%;
 }
 
+// ? Loader
+// ? les 2 balises donne le style et la position du loader
+.section__loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $tertiary__color;
+  opacity: 0.5;
+  line-height: 500px;
+  // ? animation permet de faire disparaitre le loader grace a forward qui garde l'animation dans son etat final
+  animation: hideloader 5000ms forwards;
+
+}
+@keyframes hideloader {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.loader {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+//! ANIMATION
+.loader_quart {
+  border-radius: 150px;
+  border: 10px solid rgba(255, 255, 255, 0.4);
+// ?  ::after permet de creer un élément qui sera la partie animé du loader
+  &::after {
+    content: "";
+    // ? en position absolute je peux ensuite appliquer le loader a toout le viewport
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    bottom: -10px;
+    right: -10px;
+    border-radius: 150px;
+    // ? astuce pour donner des extrémités droites a la barre car le radius les rends triangulaires
+    border: 10px solid transparent;
+    // ? la couleur est transparente et ensuite le border top affiche la partier qui s'anime
+    border-top-color: #fff;
+    // ? je passe mon keyframe dans l'animation et j'ajoute les propriétés d'animation supplémentaires
+    animation: rotate 1s linear infinite;
+  }
+// ? animation rotate permet de faire tourner le loader
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
 //? Footer
 .footer {
   display: flex;
