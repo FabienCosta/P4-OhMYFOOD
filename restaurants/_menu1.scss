@@ -1,4 +1,4 @@
-// ? ariables
+// ? Variables
 $primary__color: #9356dc;
 $secondary__color: #ff79da;
 $tertiary__color: #99e2d0;
@@ -71,8 +71,7 @@ $background__darkgrey: #f1f1f1;
       width: 1em;
       overflow: hidden;
       margin-left: 0.5em;
-      
-      
+
       &__empty {
         &:hover {
           display: none;
@@ -87,8 +86,6 @@ $background__darkgrey: #f1f1f1;
     @media screen and (min-width: 1023px) {
       text-align: center;
     }
-
-   
   }
 
   .menu {
@@ -96,6 +93,7 @@ $background__darkgrey: #f1f1f1;
     background-color: white;
     background-color: $background__darkgrey;
     margin: 0% 0% 10% 0%;
+    animation: showmenu 5000ms forwards;
 
     &__text {
       display: flex;
@@ -112,6 +110,7 @@ $background__darkgrey: #f1f1f1;
       text-align: start;
       border: none;
       font-size: large;
+
       // ? animation de validation
       @include active_button;
 
@@ -158,6 +157,16 @@ $background__darkgrey: #f1f1f1;
       &__icon {
         color: white;
       }
+    }
+  }
+  @keyframes showmenu {
+    0% {
+      opacity: 0;
+      display: none;
+    }
+    100% {
+      opacity: 1;
+      display: block;
     }
   }
 }

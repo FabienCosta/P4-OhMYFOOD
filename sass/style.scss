@@ -43,12 +43,13 @@ body {
   line-height: 500px;
   // ? animation permet de faire disparaitre le loader grace a forward qui garde l'animation dans son etat final
   animation: hideloader 5000ms forwards;
+  z-index: 1;
 
 }
 @keyframes hideloader {
   0% {
     opacity: 1;
-    display: block;
+    display: flex;
   }
   100% {
     opacity: 0;

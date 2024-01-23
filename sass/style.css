@@ -278,6 +278,7 @@
   background-color: white;
   background-color: #f1f1f1;
   margin: 0% 0% 10% 0%;
+  animation: showmenu 5000ms forwards;
 }
 .restaurant .menu__text {
   display: flex;
@@ -331,6 +332,16 @@
 .restaurant .menu__card__icon {
   color: white;
 }
+@keyframes showmenu {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
 
 body {
   margin: 0;
@@ -341,7 +352,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #16a085;
+  background-color: red;
   opacity: 0.5;
   height: 500px;
   line-height: 500px;
@@ -404,20 +415,18 @@ body {
   background-color: #99e2d0;
   opacity: 0.5;
   line-height: 500px;
-  animation: hideloader 4s forwards;
-}
-.section__loader:active {
-  visibility: hidden;
+  animation: hideloader 5000ms forwards;
+  z-index: 1;
 }
 
 @keyframes hideloader {
   0% {
     opacity: 1;
-    visibility: visible;
+    display: flex;
   }
   100% {
     opacity: 0;
-    visibility: hidden;
+    display: none;
   }
 }
 .loader {
