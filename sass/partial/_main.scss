@@ -225,20 +225,22 @@ $secondary__color: rgb(255, 121, 218);
       }
 
       &__icon {
-        display: flex;
-        font-size: 180%;
-        padding: 2%;
-        // ! ANIMATION CSS sur le coeur
-        transition: 5000ms;
+        overflow: hidden;
+        width: 1.5em;
+        height: 1em;
+        font-size: 200%;
+        margin: 0% 5% 0% 0%;
+// ! trouver un moyen de desactiver le lien vers une autre page quand on clic sur le coeur
 
-        &:hover::before {
-          content: "lala";
-          background: linear-gradient($primary__color, $secondary__color);
+        &__empty {
+          &:hover {
+            display: none;
+          }
         }
-      }
 
-      &__icon2 {
-        color: $primary__color;
+        &__full {
+          color: $primary__color;
+        }
       }
     }
   }
