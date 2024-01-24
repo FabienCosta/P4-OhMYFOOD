@@ -20,6 +20,9 @@ $secondary__color: rgb(255, 121, 218);
   font-size: 180%;
   font-weight: 700;
 }
+@mixin color__full_button {
+  background: linear-gradient(to right top,$secondary__color, $primary__color);
+}
 
 //? MainHead
 .mainHead {
@@ -231,6 +234,7 @@ $secondary__color: rgb(255, 121, 218);
         font-size: 200%;
         margin: 0% 5% 0% 0%;
 // ! trouver un moyen de desactiver le lien vers une autre page quand on clic sur le coeur
+        
 
         &__empty {
           &:hover {
@@ -239,7 +243,10 @@ $secondary__color: rgb(255, 121, 218);
         }
 
         &__full {
-          color: $primary__color;
+          // ? je cache l'icone pleine et je la remplace par l'icone vide, comme l'icon est du texte il faut appliquer le gradient au fond et ensuite mettre le texte en transparent pour que le background s'applique et pour finir rogner le font avec la propriété clip
+          @include color__full_button;
+          color: transparent;
+          background-clip: text;
         }
       }
     }

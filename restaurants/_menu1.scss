@@ -30,6 +30,9 @@ $background__darkgrey: #f1f1f1;
     transition: 300ms;
   }
 }
+@mixin color__full_button {
+  background: linear-gradient(to right top,$secondary__color, $primary__color);
+}
 
 // ? MainHead
 .return__link {
@@ -71,6 +74,7 @@ $background__darkgrey: #f1f1f1;
       width: 1em;
       overflow: hidden;
       margin-left: 0.5em;
+      // ! gerer la transition pour que le coeur se remplisse doucement
 
       &__empty {
         &:hover {
@@ -79,7 +83,9 @@ $background__darkgrey: #f1f1f1;
       }
 
       &__full {
-        color: $primary__color;
+        @include color__full_button;
+        color: transparent;
+        background-clip: text;
       }
     }
 

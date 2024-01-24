@@ -216,7 +216,10 @@
   display: none;
 }
 .restaurants__cards__bloc__icon__full {
-  color: rgb(147, 86, 220);
+  background: linear-gradient(to right top, rgb(255, 121, 218), rgb(147, 86, 220));
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 
 .return__link {
@@ -266,7 +269,10 @@
   display: none;
 }
 .restaurant .restaurant__title__icon__full {
-  color: #9356dc;
+  background: linear-gradient(to right top, #ff79da, #9356dc);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 @media screen and (min-width: 1023px) {
   .restaurant .restaurant__title {
