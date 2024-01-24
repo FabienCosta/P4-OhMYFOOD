@@ -31,7 +31,7 @@ $background__darkgrey: #f1f1f1;
   }
 }
 @mixin color__full_button {
-  background: linear-gradient(to right top,$secondary__color, $primary__color);
+  background: linear-gradient(to right top, $secondary__color, $primary__color);
 }
 
 // ? MainHead
@@ -99,7 +99,7 @@ $background__darkgrey: #f1f1f1;
     background-color: white;
     background-color: $background__darkgrey;
     margin: 0% 0% 10% 0%;
-    animation: showmenu 5000ms forwards;
+    animation: showmenu 2000ms forwards;
 
     &__text {
       display: flex;
@@ -138,27 +138,16 @@ $background__darkgrey: #f1f1f1;
         white-space: nowrap;
         width: 85%;
         text-overflow: ellipsis;
+        animation: showmenu 3000ms forwards;
       }
 
       &__price {
         font-weight: bolder;
         margin-top: 2.5em;
         padding-right: 2%;
+        animation: showmenu 5000ms forwards;
+
       }
-
-      // &__checked {
-      //   background-color: #99e2d0;
-      //   display: flex;
-      //   justify-content: center;
-      //   align-items: center;
-      //   width: 0%;
-      //   height: 4em;
-      //   margin-left: 1em;
-      //   border-radius: 0px 10px 10px 0px;
-
-      //   &:hover {
-      //     width: 30%;
-      //   }
 
       &__icon {
         color: white;
