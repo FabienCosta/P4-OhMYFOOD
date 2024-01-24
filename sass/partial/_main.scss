@@ -233,8 +233,7 @@ $secondary__color: rgb(255, 121, 218);
         height: 1em;
         font-size: 200%;
         margin: 0% 5% 0% 0%;
-// ! trouver un moyen de desactiver le lien vers une autre page quand on clic sur le coeur
-        
+        // ! impossible de desactiver le link sur l'icone
 
         &__empty {
           &:hover {

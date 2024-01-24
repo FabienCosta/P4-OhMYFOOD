@@ -1,0 +1,46 @@
+// ? Variables
+$primary__color: #9356dc;
+$secondary__color: #ff79da;
+$tertiary__color: #99e2d0;
+
+// ? Mixins
+@mixin logo_and_title_font {
+  font-family: "shrikhand", cursive;
+  font-weight: lighter;
+}
+
+//? Footer
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  padding: 0% 0% 10% 5%;
+  color: white;
+
+  @media screen and (min-width: 1023px) {
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 2% 2% 2% 5%;
+  }
+
+  .footer__title {
+    @include logo_and_title_font;
+  }
+
+  &__text {
+    display: grid;
+    grid-gap: 10%;
+    @media (min-width: 1023px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__text__link {
+    color: white;
+    text-decoration: none;
+  }
+
+  &__text__icon {
+    width: 1.5em;
+  }
+}
