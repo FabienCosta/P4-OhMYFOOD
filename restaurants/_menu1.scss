@@ -116,14 +116,18 @@ $background__darkgrey: #f1f1f1;
       text-align: start;
       border: none;
       font-size: large;
+      margin: 0% 0% 3% 0%;
 
       // ? animation de validation
       @include active_button;
 
       &:hover {
         &::after {
+          position: relative;
           height: 4em;
           width: 6em;
+          margin: 0% -0.5em 0% 0%;
+          border: none;
         }
       }
 
