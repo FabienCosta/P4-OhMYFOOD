@@ -498,8 +498,8 @@
   padding: 0% 0% 0% 2%;
   overflow: hidden;
   white-space: nowrap;
-  width: 85%;
   text-overflow: ellipsis;
+  width: 85%;
   animation: showmenu 3000ms forwards;
 }
 .restaurant .menu__card__price {
