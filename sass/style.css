@@ -206,16 +206,25 @@
   width: 100%;
 }
 .restaurants__cards__bloc__icon {
-  overflow: hidden;
-  width: 1.5em;
-  height: 1em;
-  font-size: 200%;
-  margin: 0% 5% 0% 0%;
+  margin: 0% 0% 0% 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 180%;
 }
-.restaurants__cards__bloc__icon__empty:hover {
-  display: none;
+.restaurants__cards__bloc__icon__empty {
+  transition: all 300ms ease-in-out;
+  position: absolute;
+  right: 1em;
 }
 .restaurants__cards__bloc__icon__full {
+  position: absolute;
+  right: 1em;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+.restaurants__cards__bloc__icon__full:hover {
+  opacity: 1;
   background: linear-gradient(to right top, rgb(255, 121, 218), rgb(147, 86, 220));
   color: transparent;
   -webkit-background-clip: text;
@@ -258,7 +267,7 @@
 }
 
 .section__loader {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   display: flex;
@@ -429,15 +438,19 @@
   padding: 5% 0% 0% 0%;
 }
 .restaurant .restaurant__title__icon {
-  height: 1em;
-  width: 1em;
-  overflow: hidden;
-  margin-left: 0.5em;
+  margin: 0% 0% 0% 1em;
 }
-.restaurant .restaurant__title__icon__empty:hover {
-  display: none;
+.restaurant .restaurant__title__icon__empty {
+  transition: all 300ms ease-in-out;
+  position: absolute;
 }
 .restaurant .restaurant__title__icon__full {
+  position: absolute;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+.restaurant .restaurant__title__icon__full:hover {
+  opacity: 1;
   background: linear-gradient(to right top, #ff79da, #9356dc);
   color: transparent;
   -webkit-background-clip: text;
@@ -472,7 +485,8 @@
   margin: 0% 0% 3% 0%;
 }
 .restaurant .menu__card::after {
-  content: "✓";
+  content: "☑";
+  font-size: 150%;
   content-visibility: hidden;
   color: white;
   display: flex;
@@ -503,13 +517,13 @@
   animation: showmenu 3000ms forwards;
 }
 .restaurant .menu__card__price {
+  width: 20%;
+  height: auto;
   font-weight: bolder;
-  margin-top: 2.5em;
-  padding-right: 2%;
+  margin: 0% -9% 0% 0%;
+  padding: 2em 0% 0% 0%;
+  text-align: end;
   animation: showmenu 5000ms forwards;
-}
-.restaurant .menu__card__icon {
-  color: white;
 }
 @keyframes showmenu {
   0% {

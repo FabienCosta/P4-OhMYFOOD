@@ -6,7 +6,7 @@ $tertiary__color: #99e2d0;
 // ? Loader
 // ? les 2 balises donne le style et la position du loader
 .section__loader {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     display: flex;
@@ -36,7 +36,7 @@ $tertiary__color: #99e2d0;
     display: inline-block;
     vertical-align: middle;
     position: relative;
-  
+  // ? Animation du texte, chaque lettres est animées avec un décalage par rapport a la précédente
     &__text {
       display: flex;
       justify-content: center;

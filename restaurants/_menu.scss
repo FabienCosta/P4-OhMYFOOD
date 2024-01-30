@@ -17,19 +17,21 @@ $background__darkgrey: #f1f1f1;
   font-weight: lighter;
 }
 
+// ? ANIMATION DE LA VALIDATION
 @mixin active_button {
   &::after {
-    content: "✓";
-    content-visibility: hidden;
-    color: white;
-    display: flex;
-    justify-content: center;
     align-items: center;
     background-color: $tertiary__color;
     border-radius: 0% 10% 10% 0%;
+    color: white;
+    content: "☑";
+    content-visibility: hidden;
+    display: flex;
+    font-size: 150%;
+    justify-content: center;
     margin: 0% 0% 0% 10%;
-    width: 0%;
     transition: 300ms;
+    width: 0%;
   }
 }
 
@@ -72,23 +74,28 @@ $background__darkgrey: #f1f1f1;
     @include logo_and_title_font;
     padding: 5% 0% 0% 0%;
 
+    // ? Animation du coeur
     &__icon {
-      height: 1em;
-      width: 1em;
-      overflow: hidden;
-      margin-left: 0.5em;
-      // ! gerer la transition pour que le coeur se remplisse doucement
-
+      margin: 0% 0% 0% 1em;
+      // ? Position absolute pour les deux icones, et ensuite avec les hover je fait disparaitre le 1er et apparaitre le 2nd avec une transition
       &__empty {
+        transition: all 300ms ease-in-out;
+        position: absolute;
         &:hover {
-          display: none;
         }
       }
 
       &__full {
-        @include color__full_button;
-        color: transparent;
-        background-clip: text;
+        position: absolute;
+        opacity: 0;
+        transition: all 300ms ease-in-out;
+
+        &:hover {
+          opacity: 1;
+          @include color__full_button;
+          color: transparent;
+          background-clip: text;
+        }
       }
     }
 
@@ -97,7 +104,7 @@ $background__darkgrey: #f1f1f1;
     }
   }
 
-// ? Menu
+  // ? Menu
   .menu {
     text-align: start;
     background-color: white;
@@ -121,7 +128,8 @@ $background__darkgrey: #f1f1f1;
       border: none;
       font-size: large;
       margin: 0% 0% 3% 0%;
-      // ? animation de validation
+
+      // ? ANIMATION DE LA VALIDATION
       @include active_button;
 
       &:hover {
@@ -147,15 +155,13 @@ $background__darkgrey: #f1f1f1;
       }
 
       &__price {
+        width: 20%;
+        height: auto;
         font-weight: bolder;
-        margin-top: 2.5em;
-        padding-right: 2%;
+        margin: 0% -9% 0% 0%;
+        padding: 2em 0% 0% 0%;
+        text-align: end;
         animation: showmenu 5000ms forwards;
-
-      }
-
-      &__icon {
-        color: white;
       }
     }
   }
